@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block services_content %}
+  {% load static %}
+  <!-- ======= About Section ======= -->
+  <section id="about" class="services">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Public Safety</li>
+      </ol>
+    </nav>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="{%static 'assets/img/public-safety.jpg'%}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content">
+          <h3>Public Safety Duties</h3>
+          <p class="fst-italic">
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Enforcing laws and regulations</li>
+            <li><i class="bi bi-check-circle"></i> Ensuring safety of the people</li>
+            <li><i class="bi bi-check-circle"></i> Vehicle License</li>
+          </ul>
+          <div class="contact">
+            <h4>Contact</h4>
+            <p>Phone: 329-8444</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+{% endblock %}

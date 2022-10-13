@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav aria-label="breadcrumb" style="margin:150px 40px 20px;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Jobs/Jerbal</li>
+  </ol>
+</nav>
+<div class="post">
+  <h1 class="posttitle loader">{{postjob.title}}</h1>
+  {% if postjob.published_date %}
+    <div class="date postdate">
+      <p>Posted on: {{ postjob.published_date}}</p>
+    </div>
+  {% else %}
+    <a class="btn btn-primary" href="{% url 'postjob_publish' pk=postjob.pk %}">Publish</a>
+  {% endif %}
+
+    <p class="postcontent">{{postjob.text|safe|linebreaksbr}}</p>
+
+</div>
+
+
+{% if user.is_authenticated %}
+  <div class="buttons">
+    <a class="btn btn-primary" href="{% url 'postjob_edit' pk=postjob.pk %}">
+      Edit
+    </a>
+    <a class="btn btn-primary" href="{% url 'postjob_remove' pk=postjob.pk %}">
+      Remove
+    </a>
+  </div>
+
+{% endif %}
+
+{% endblock %}

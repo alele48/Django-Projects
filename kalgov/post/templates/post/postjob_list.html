@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="centerstage">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Jobs/Jerbal</li>
+    </ol>
+  </nav>
+    {% for post in postjob_list %}
+      <div class="joblist">
+        <h1><a href="{% url 'postjob_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <div class="date">
+          <p>Posted on: {{ post.published_date|date:"D M Y"}}</p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}

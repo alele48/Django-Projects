@@ -1,0 +1,51 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Asap&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+
+.demo {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.lang {
+  margin: 0 auto;
+}
+
+.button_lang {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em 0em;
+  border-radius: 10px;
+  width: 5em;
+  transition: 0.25s ease;
+}
+
+.button_lang:hover {
+  background: #b5d6b2;
+  transition: 0.25s ease;
+}
+
+.current_lang {
+  background: #b5d6b2;
+}
+
+.translation {
+  text-align: center;
+  margin: 0.5em;
+}
+
+.english {
+  font-family: "Asap", sans-serif;
+}
+
+.marshallese{
+  font-family: "Asap", sans-serif;
+}

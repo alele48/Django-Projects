@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block services_content %}
+{% load static %}
+<!-- ======= About Section ======= -->
+<section id="about" class="services">
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Public Work</li>
+  </ol>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="{%static 'assets/img/public-work.jpg'%}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 content">
+        <h3>Public Work Duties</h3>
+        <p class="fst-italic">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> Garbage Collection</li>
+          <li><i class="bi bi-check-circle"></i> Solid Waste</li>
+          <li><i class="bi bi-check-circle"></i> Infrastructure Maintenance</li>
+        </ul>
+        <div class="contact">
+          <h4>Contact:</h4>
+          <h6>Doster Kabua</h6>
+          <p>Phone: 235-4952</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->{% endblock %}
