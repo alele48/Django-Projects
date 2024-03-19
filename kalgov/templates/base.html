@@ -61,27 +61,18 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="{%url 'home'%}">Home</a></li>
-          <li><a class="nav-link scrollto" href="#announcements" >Announcements</a></li>
-          <li><a class="nav-link scrollto" href="#about" >About</a></li>
-
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'postjob_list' %}">Jobs/Jerbal</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'work' %}">Public Work</a></li>
+              <li><a href="{% url 'safety' %}">Public Safety</a></li>
+              <li><a href="{% url 'recreation' %}">Recreation</a></li>
+              <li><a href="{% url 'custom' %}">Revenue</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="{% url 'postjob_list' %}">Jobs</a></li>
           <li class="dropdown"><a href="#"><span>Forms</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{%static 'PSC Application Form.pdf'%}" target=_blank>Application</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="{%static 'kalgov_application_form.pdf'%}" target=_blank>Job Application</a></li>
             </ul>
           </li>
           {% if user.is_authenticated%}
@@ -128,71 +119,38 @@
   <script src="{%static 'assets/js/main.js'%}"></script>
   <script src="{%static 'assets/js/popup.js'%}"></script>
 
-  {% block services_content %}
-  {% endblock%}
+
   <!-- ======= Footer ======= -->
-<footer id="footer">
+  <footer id="footer">
 
-  <div class="container footer-bottom clearfix">
-    <div class="copyright">
-      &copy; Copyright <strong><span>KALGOV</span></strong>. All Rights Reserved
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>eNno</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </div>
-</footer><!-- End Footer -->
-<script type="text/javascript">
-  var english = document.getElementById("en"),
-  marshallese = document.getElementById("mh"),
-  change_text = document.getElementById("translate");
-  // declare some variables to catch the various HTML elements
+  </footer><!-- End Footer -->
 
-  english.addEventListener("click", function() {
-    change(english, marshallese);
-  }, false
-  );
-  // add an event listener to listen to when the user clicks on one of the language span tags
-  // this triggers our custom "change" function, which we will define later
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  marshallese.addEventListener("click", function() {
-    change(marshallese, english);
-  }, false
-  );
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-  function change(lang_on, lang_off1, lang_off2) {
-  if (!lang_on.classList.contains("current_lang")) {
-    // if the span that the user clicks on does not have the "current_lang" class
-    lang_on.classList.add("current_lang");
-    // add the "current_lang" class to it
-    lang_off1.classList.remove("current_lang");
-    lang_off2.classList.remove("current_lang");
-    // remove the "current_lang" class from the other span
-  }
-
-  if (lang_on.innerHTML == "EN") {
-    change_text.classList.add("english");
-    change_text.classList.remove("marshallese");
-    change_text.innerHTML = "The text here will change";
-  }
-
-  else if (lang_on.innerHTML == "MH") {
-    change_text.classList.add("marshallese");
-    // first line adds the corrent language class to the text
-    change_text.classList.remove("english");
-    // second and third line removes the other language classes
-    // this allows you to apply CSS that is specific to each language
-    change_text.innerHTML = "Iakwe";
-    // fourth line is where you key in the text that will replace what is currently on-screen
-  }
-
-}
-</script>
 </body>
+<script src="{% static 'assets/js/lang.js'%}"></script>
 
 </html>

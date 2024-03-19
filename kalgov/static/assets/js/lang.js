@@ -1,45 +1,36 @@
-var english = document.getElementById("en"),
-  marshallese = document.getElementById("mh"),
-  change_text = document.getElementById("translate");
-// declare some variables to catch the various HTML elements
+var enButton= document.querySelector("#en");
+var mhButton= document.querySelector("#mh");
+var textEng = document.querySelectorAll(".en");
+var textMar = document.querySelectorAll(".mh");
+var aShadow = document.querySelector("#a-shadow");
+var aHeading = document.querySelector("#a-heading");
 
-english.addEventListener("click", function() {
-    change(english, marshallese);
-  }, false
-);
-// add an event listener to listen to when the user clicks on one of the language span tags
-// this triggers our custom "change" function, which we will define later
+mhButton.addEventListener("click", function(){
 
-marshallese.addEventListener("click", function() {
-    change(marshallese, english);
-  }, false
-);
-
-
-function change(lang_on, lang_off1, lang_off2) {
-  if (!lang_on.classList.contains("current_lang")) {
-    // if the span that the user clicks on does not have the "current_lang" class
-    lang_on.classList.add("current_lang");
-    // add the "current_lang" class to it
-    lang_off1.classList.remove("current_lang");
-    lang_off2.classList.remove("current_lang");
-    // remove the "current_lang" class from the other span
+  for(i=0;i<textEng.length;i++){
+    textEng[i].style.display = 'none';
   }
 
-  if (lang_on.innerHTML == "EN") {
-    change_text.classList.add("english");
-    change_text.classList.remove("marshallese");
-    change_text.innerHTML = "The text here will change";
+  for(i=0;i<textMar.length;i++){
+    textMar[i].style.display = "block";
   }
 
-  else if (lang_on.innerHTML == "MH") {
-    change_text.classList.add("marshallese");
-    // first line adds the corrent language class to the text
-    change_text.classList.remove("english");
-    // second and third line removes the other language classes
-    // this allows you to apply CSS that is specific to each language
-    change_text.innerHTML = "Iakwe";
-    // fourth line is where you key in the text that will replace what is currently on-screen
+  aShadow.textContent = "Kojjela";
+  aHeading.textContent = "Kojjela";
+
+})
+
+enButton.addEventListener("click", function(){
+
+  for(i=0;i<textMar.length;i++){
+    textMar[i].style.display = "none";
   }
 
-}
+  for(i=0;i<textMar.length;i++){
+    textEng[i].style.display = "block";
+  }
+
+  aShadow.textContent = "Announcement";
+  aHeading.textContent = "Announcement";
+
+})

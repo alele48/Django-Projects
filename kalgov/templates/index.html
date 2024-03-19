@@ -6,11 +6,11 @@
 <div class="container" id="siteContent">
   <div class="row">
     <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-      <h1>Hello and Welcome to the Official KALGOV Website</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <h1>Iakwe and Welcome to the Official KALGOV Website</h1>
+      <h2>Ijo jikin am bok melele</h2>
     </div>
     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-      <img src="{%static 'assets/img/Kwajalein_Atoll_Flag.svg'%}" class="img-fluid animated" alt="kwajalein flag">
+      <img src="{%static 'assets/img/kwajalein-flag.jpg'%}" class="img-fluid animated" alt="kwajalein flag">
     </div>
   </div>
 </div>
@@ -119,7 +119,7 @@
     <div class="section-title">
       <span>Services</span>
       <h2>Services</h2>
-      <p>Here at KALGOV, we offer wide range of public services including the following:</p>
+      <p>Here at KALGOV, we offer wide range of public services which includes:</p>
     </div>
 
     <div class="row">
@@ -150,7 +150,7 @@
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
         <div class="icon-box">
           <div class="icon"><i class="bx bx-world"></i></div>
-          <h4><a href="{%url 'custom'%}">Custom</a></h4>
+          <h4><a href="{%url 'custom'%}">Revenue</a></h4>
           <p >At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
         </div>
       </div>
@@ -163,24 +163,15 @@
 
 <!-- ======= Announcments Section ======= -->
 
-
 <section id="announcements" class="testimonials section-bg">
   <div class="container">
-    <div class="demo">
-      <div>
-        <table class="lang">
-          <tr>
-            <td class="tdlang">
-              <span id="en" class="button_lang current_lang">EN</span>
-            </td>
-            <td class="tdlang"><span id="mh" class="button_lang">MH</span></td>
-          </tr>
-        </table>
-      </div>
+    <div class="button">
+      <button type="button" name="button" id="en" class="btn btn-outline-success">English</button>
+      <button type="button" name="button" id="mh" class="btn btn-outline-success">Marshallese</button>
     </div>
     <div class="section-title" >
-      <span>Announcements</span>
-      <h2>Announcements</h2>
+      <span id="a-shadow">Announcements</span>
+      <h2 id="a-heading">Announcements</h2>
       <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
     </div>
 
@@ -189,12 +180,15 @@
 
         <div class="swiper-slide">
           <div class="testimonial-item">
-            <div class="translation english translate" id="translate">
-              The text here will change
-            </div>
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
+            <p>
+              <i class="bx"></i>
+              <span class="en">Thirty people were killed today at South City by two androids</span>
+              <span class="mh">Jilinul armij remej rainin ilo South City</span>
+              <i class="bx"></i>
+            </p>
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
           </div>
 
         </div><!-- End announcements item -->
@@ -203,7 +197,8 @@
           <div class="testimonial-item">
             <p>
               <i class="bx"></i>
-              Happy Manit day!
+              <span class="en">Thirty people were killed today at South City by two androids</span>
+              <span class="mh">Jilinul armij remej rainin ilo South City</span>
               <i class="bx"></i>
             </p>
             <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -217,7 +212,8 @@
           <div class="testimonial-item">
             <p>
               <i class="bx"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+              <span class="en">Thirty people were killed today at South City by two androids</span>
+              <span class="mh">Jilinul armij remej rainin ilo South City</span>
               <i class="bx"></i>
             </p>
             <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -230,7 +226,8 @@
           <div class="testimonial-item">
             <p>
               <i class="bx"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+              <span class="en">Thirty people were killed today at South City by two androids</span>
+              <span class="mh">Jilinul armij remej rainin ilo South City</span>
               <i class="bx"></i>
             </p>
             <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -243,7 +240,8 @@
           <div class="testimonial-item">
             <p>
               <i class="bx"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+              <span class="en">Thirty people were killed today at South City by two androids</span>
+              <span class="mh">Jilinul armij remej rainin ilo South City</span>
               <i class="bx"></i>
             </p>
             <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -258,7 +256,7 @@
 
   </div>
 
-</section><!-- End Testimonials Section -->
+</section><!-- End Announcements Section -->
 
 <!-- ======= Cta Section ======= -->
 <!--

@@ -49,3 +49,16 @@
 .marshallese{
   font-family: "Asap", sans-serif;
 }
+
+.button{
+  text-align: center;
+  color: green;
+}
+
+.mh{
+  display:none;
+}
+
+.en{
+  display:block;
+}
